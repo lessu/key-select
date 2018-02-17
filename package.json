@@ -1,11 +1,17 @@
 {
-  "name": "js-select",
+  "name": "key-select",
   "version": "1.0.0",
   "description": "select some certain keys from origin object,to create a new object.",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests.js"
   },
+  "repository": {
+    "git" : "https://github.com/lessu/key-select.git"
+  },
+  "keywords": [
+    "select"
+  ],
   "author": "lessu",
   "license": "MIT",
   "devDependencies": {
