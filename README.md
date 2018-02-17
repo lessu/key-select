@@ -4,7 +4,7 @@ Create a new object that only contain selected keys.
 ## install
 
 ```shell
-npm install js-select --save-dev
+npm install key-select --save
 ```
 
 ## example
