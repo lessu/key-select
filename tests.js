@@ -1,6 +1,6 @@
 /// <reference path="./index.d.ts"/>
 
-require("./index");
+var keySelect = require("./index");
 require("should");
 var object = {
     a : "a",
@@ -11,8 +11,13 @@ var object = {
     f : "f",
 }
 describe("basic",function(){
-    it("#1",function(){
-        var test = object.select(["a","b"]);
+    it("#object",function(){
+        var test = object.keyselect(["a","b"]);
+        test.should.hasOwnProperty("a");
+        test.a.should.equal("a");
+    });
+    it("#function",function(){
+        var test = keySelect.keyselect(object,["a","b"])
         test.should.hasOwnProperty("a");
         test.a.should.equal("a");
     });
@@ -20,7 +25,7 @@ describe("basic",function(){
 describe("edge",function(){
     it("#empty array",function(){
         try{
-            var test = object.select([]);
+            var test = object.keyselect([]);
             test.should.not.null();
         }catch(e){
             should.fail("exception","no exception","select empty key array should safe");
@@ -28,7 +33,7 @@ describe("edge",function(){
     });
     it("#not exist key",function(){
         try{
-            var test = object.select(["qq"]);
+            var test = object.keyselect(["qq"]);
             test.should.not.null();
         }catch(e){
             should.fail("exception","no exception","select empty key array should safe");
