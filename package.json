@@ -1,6 +1,6 @@
 {
   "name": "key-select",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "select some certain keys from origin object,to create a new object.",
   "main": "index.js",
   "scripts": {
